@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+
+$primary-font-stack:'Berkshire Swash', cursive;
+
+// mixins /////
+@mixin floor{
+	&::after{
+		content: '';
+		display: block;
+		height: 20px;
+		background: rgba(169, 169, 169, .7);
+		margin: 3em 0;
+	}
+}
+
+
+// base styles/////////////
+
+*{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html{
+	min-height: 100%;
+}
+
+body{
+	background: url(../images/train.jpg) center no-repeat;
+	background-size:cover;
+	font-family: $primary-font-stack;
+	line-height: 1.5;
+	height: 100%;
+	font-size: 1em;
+	color: white;
+}
+
+ 
+
+
+ul{
+	list-style: none;
+}
+
+img{
+	max-width: 100%;
+}
+
+a{
+	text-decoration: none;
+}
+
+
+
+
+
+// Containers /////////////
+
+
+
+main{
+ 	width: 90%;
+ 	margin: auto;
+ }
+
+
+.intro{
+	font-size: 1.5em;
+	margin: 2em auto;
+	width: 70%;
+}
+
+
+
+// section 1 ////////
+
+.row p{
+	text-align: center;
+	font-size: 1.2em;
+ }
+
+ .title{
+ 	margin-bottom: 1em;
+ }
+
+.col{
+	margin: 2em 1em;
+
+}
+// section 2 ///////
+
+.service-flex{
+	text-align: center;
+}
+
+
+.education-list li{
+	margin: 1em 0;
+	font-size: 1.2em;
+}
+
+// header style/////////////
+
+.main-header{
+	background: rgba(0, 0, 0, .5);
+	font-size: 1.235em;
+	padding: 0 1em;	
+	text-align: center;
+	
+}
+
+.logo-figure{
+	position: relative;
+	figcaption{
+		position: absolute;
+	}
+}
+
+
+
+
+
+
+// navigation style//////////
+
+
+.main-nav li{
+	margin: 1em 0;
+	padding: .2em .2em;
+	a{
+	display: block;
+	text-decoration: none;
+	color: white;
+	&:hover{
+	background: rgba(169, 169, 169, .5);
+	}
+
+	}
+
+}
+
+.accordian-item{
+		width: 400px;
+		margin: auto;
+	}
+
+
+
+// Smoke animation //////
+
+.shape{
+	background: rgba(169, 169, 169, 0.8);
+	height: 350px;
+	clip-path: polygon(0% 0%, 50% 50%, 0% 100%, 100% 100% );
+	width: 80%;
+	margin: auto;
+	max-width: 1200px;
+	margin-bottom: 40px;
+
+}
+.house-container{
+	position: relative;
+}
+.chimney{
+	height: 200px;
+	width: 100px;
+	background: rgba(169, 169, 169, 0.5);
+	position: absolute;
+	left: 20%;
+	top: 40%;
+}
+
+
+
+
+
+.smoke-container{
+ 	position: absolute;
+ 	bottom: 40%;
+ 	left: 20%;
+ 	.smoke{
+	position: absolute;
+	width: 80px;
+	height: 80px;
+	background: #262626;
+	border-radius: 50%;
+}
+ }
+
+
+.smoke:nth-child(even)
+{
+	animation: animateEven 4s linear infinite ;
+}
+
+.smoke:nth-child(odd)
+{
+	animation: animateOdd 4s linear infinite ;
+}
+
+@keyframes animateEven
+{
+	0%
+	{
+		transform: translate(0,0) scale(1);
+		opacity: 1;
+		filter: blur(5px);
+	}
+	100%
+	{
+		transform: translate(100px, -500px) scale(3);
+		opacity: 0;
+		filter: blur(10px);
+	}
+
+}
+
+@keyframes animateOdd
+{
+	0%
+	{
+		transform: translate(0,0) scale(1);
+		opacity: 1;
+		filter: blur(5px);
+	}
+	100%
+	{
+		transform: translate(-100px, -500px) scale(3);
+		opacity: 0;
+		filter: blur(10px);
+	}
+
+}
+
+.smoke:nth-child(1)
+{
+	animation-delay: 0s;
+}
+
+.smoke:nth-child(2)
+{
+	animation-delay: .4s;
+}
+.smoke:nth-child(3)
+{
+	animation-delay: .8s;
+}
+.smoke:nth-child(4)
+{
+	animation-delay: 1.2s;
+}
+.smoke:nth-child(5)
+{
+	animation-delay: 1.6s;
+}
+.smoke:nth-child(6)
+{
+	animation-delay: 2s;
+}
+.smoke:nth-child(7)
+{
+	animation-delay: 2.4s;
+}
+ .smoke:nth-child(8)
+{
+	animation-delay: 2.8s;
+}
+
+
+section{
+	@include floor;
+}
+
+ 
+
+// media quearys /////////////////
+
+
+
+@media (min-width: 1247px){
+
+
+.service-flex{
+	display: flex;
+	justify-content: space-between;
+}
+
+
+.manage-figure{
+	position: relative;
+	margin: 1em 0;
+	opacity: .8;
+		figcaption{
+		position: absolute;
+		top: 40%;
+		left: 0;
+		font-size: 2em;
+		color: black;
+	}
+
+}
+
+.main-header{
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+
+.investment{
+	background: blue;
+	font-size: 12px;
+
+}
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
