@@ -1,0 +1,9 @@
+@mixin floor{
+	&::after{
+		content: '';
+		display: block;
+		height: 20px;
+		background: rgba(169, 169, 169, .7);
+		margin: 3em 0;
+	}
+}

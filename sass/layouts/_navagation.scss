@@ -1,0 +1,15 @@
+.main-nav{
+	text-align: center;
+	padding: 10px 0;
+	li{
+		margin: 10px 0;
+		a{
+			display: block;
+			padding: 20px;
+			font-size: 1.3em;
+			&:hover{
+				background-color: grey;
+				border-bottom: 2px solid;			}
+		}
+	}
+}
