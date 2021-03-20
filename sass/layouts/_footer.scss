@@ -1,0 +1,58 @@
+.border-top{
+	border-top: 2px solid #fff;
+	width: 80%;
+	margin: auto;
+}
+
+footer p,
+footer h3{
+	padding: 10px 15px;
+
+}
+
+.signup-form{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	height: 150px;
+}
+
+.signup-form input{
+	background-color: black;
+	color: white;
+	opacity: .5;
+	font-size: 1.124em;
+	border:white 2px solid;
+
+}
+
+.signup-form input[type="submit"]{
+	padding:10px;
+	&:hover{
+		background-color:#fff;
+		color: #000;
+	}
+	
+}
+
+.social_media li img{
+	padding:5px;
+	border: 2px solid black;
+	border-radius:50%;
+	background-color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
